@@ -1,0 +1,275 @@
+/* 状态窗口移动动画 */
+@keyframes status-float-down-anim{  
+    0% {transform: translateY(0);}
+    100% {transform: translateY(80%);}
+}
+@keyframes status-float-up-anim{  
+    0% {transform: translateY(80%);}
+    100% {transform: translateY(0);}
+}
+/* 教程窗口移动动画 */
+@keyframes teach-float-right-anim{  
+    0% {transform: translateX(-100vw);}
+    100% {transform: translateX(0);}
+}
+@keyframes teach-float-left-anim{  
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100vw);}
+}
+/* 教程文字淡入动画 */
+@keyframes teach-info-enter-anim{  
+    0% {opacity: 0;}
+    100% {opacity: 0.8;}
+}
+
+/* 取消所有段落外边界 */
+p{margin: 0px;}
+/* 禁用所有表格中的换行 */
+td{white-space: normal;}
+/* 设置全屏背景 */
+body{
+    background-color: #badddb;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* 数字编辑框样式 */
+input[type="number"]{
+    background-color: transparent;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px solid #b14835;
+    text-align: center;
+    max-width: 40px;
+}
+/* 拖动条滑动条样式 */
+input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    border-radius: 6px;
+    background-color: rgb(221, 231, 212);
+}
+/* 拖动条滑块样式 */
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    background-color: #e4a553;
+}
+/* 单选按钮样式（隐藏按钮） */
+input[type="radio"]{
+    height: 0;
+    width: 0;
+}
+/* 单选按钮后的标签样式 */
+input[type="radio"]+label{
+    font-family: Georgia, serif;
+    font-size: small;
+}
+/* 选中后的单选按钮后的标签样式 */
+input[type="radio"]:checked+label{
+    font-weight: bold;
+    color: #db5858;
+}
+/* 按钮样式 */
+button{
+    background-color: #f5d3f7;
+    border: 2px solid #44cc25;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: #2f13d1;
+    margin: 2px;
+    white-space: nowrap;
+}
+/* 按钮被点击时的样式 */
+button:active{
+    background-color: #ab6d9c;
+    color: rgb(193, 236, 224);
+}
+/* 横向分布div */
+.hori-flex-div{
+    display: flex;
+    flex-direction: row;
+}
+/* 纵向分布div */
+.vert-flex-div{
+    display: flex;
+    flex-direction: column;
+}
+/* 竖向分界线div */
+.vert-line-div{
+    width: 0px;
+    border-left: solid 2px #1120eb;
+    margin: 10px 10px;
+}
+/* 表头样式 */
+.table-title{
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: small;
+    white-space: nowrap;
+    margin: 5px 0px;
+}
+/* 配置参数标签样式 */
+.param-label{
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: small;
+    text-align: right;
+    white-space: nowrap;
+    margin: 5px 0px;
+}
+/* 状态窗口中标签样式 */
+.status-label{
+    font-family: Georgia, serif;
+    font-size: small;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0px 5px;
+}
+/* 状态浮动窗口样式 */
+#status-float-div{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 0px;
+    left: 0px;
+    max-height: 200px;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(204, 239, 170);
+    opacity: 0.8;
+    border-radius: 10px;
+}
+/* 示波器canvas样式 */
+#scope-canvas{
+    width: 100%;
+    border: 2px solid #7DA3A8;
+    margin: 20px;
+    flex-grow: 1;
+}
+/* matter.js渲染canvas样式 */
+#render-canvas{
+    width: 100%;
+    height: 100%;
+}
+/* 顶部区域样式 */
+#top-div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/* 头部区域样式 */
+#header-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(239, 245, 214);
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(174, 2, 254, 0.15);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/* 头部子div样式 */
+#header-div > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* 图标样式 */
+#icon-img{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+/* 标题文字样式 */
+#title-text{
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: large;
+    margin: 0px;
+    padding: 0px;
+}
+/* 头部链接样式 */
+#header-div a{
+    font-size: large;
+    font-weight: bold;
+    margin: 0px 5px;
+    padding: 0px;
+    text-decoration: none;
+    color: #7DA3A8;
+    justify-content: center;
+    display: flex;
+}
+/* 头部链接图标样式 */
+#header-div a img{
+    width: 35px;
+    height: 35px;
+    margin: 0px 5px;
+}
+/* 配置区域样式 */
+#settings-div{
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    border-bottom: solid 2px rgb(157, 216, 232);
+}
+/* 教程区域样式 */
+#teach-div{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 232, 169);
+    opacity: 0.8;
+    top: 100%;
+    left: 0px;
+    width: 95%;
+    max-width: 800px;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    align-items: center;
+    transform: translateX(-100vw);
+}
+/* 教程页码文字样式 */
+#teach-step-ratio{
+    font-size: x-small;
+    color: #7DA3A8;
+    font-weight: bold;
+    text-align: center;
+}
+/* 教程文字区域样式 */
+#teach-info-div{
+    overflow-y: auto;
+}
+/* 教程文字样式 */
+#teach-info{
+    font-size: medium;
+    margin: 5px;
+}
+
+/* 电脑端样式, 各元素居中显示 */
+@media (min-width: 800px){
+    #settings-div{
+        justify-content: center;
+    }
+    #status-float-div{
+        margin: auto;
+        left: 0px;
+        right: 0px;
+    }
+    #teach-div{
+        margin: 0 auto;
+        left: 0px;
+        right: 0px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
